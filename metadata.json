@@ -1,0 +1,18 @@
+{
+  "name": "jmorot-cockpit",
+  "version": "0.1.0",
+  "author": "jmorot",
+  "summary": "Install Cockpit from https://cockpit-project.org/",
+  "license": "GPLv3",
+  "source": "https://gitlab.com/julienmorot/puppet-cockpit",
+  "project_page": "https://gitlab.com/julienmorot/",
+  "issues_url": "https://gitlab.com/julienmorot/",
+  "dependencies": [
+    {
+      "name": "puppetlabs-stdlib",
+      "version_requirement": ">= 1.0.0"
+    }
+  ],
+  "data_provider": null
+}
+
