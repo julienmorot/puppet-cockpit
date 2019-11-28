@@ -1,0 +1,5 @@
+---
+cockpit::package: "cockpit"
+cockpit::service: "cockpit.socket"
+cockpit::tcp_port: "9090"
+

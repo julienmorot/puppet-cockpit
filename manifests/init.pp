@@ -42,7 +42,23 @@
 #
 # Copyright 2019 Your name here, unless otherwise noted.
 #
-class cockpit {
-  include cockpit::install
+class cockpit ($package, $service, $tcp_port) {
+#class cockpit {
 
+  Package { $package: 
+    ensure => present
+  }
+
+  Service { $cockpit::service:
+    enable => true,
+    ensure => running,
+    require => Package[$cockit::package]
+  }
+
+  Firewall { '100 Accept Cockpit on all interfaces':
+    proto  => tcp,
+    action => accept,
+    dport => $cockpit::tcp_port,
+    iniface => all
+  }
 }
