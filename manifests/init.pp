@@ -52,7 +52,7 @@ class cockpit ($package, $service, $tcp_port) {
   Service { $cockpit::service:
     enable => true,
     ensure => running,
-    require => Package[$cockit::package]
+    require => Package[$cockpit::package]
   }
 
   Firewall { '100 Accept Cockpit on all interfaces':
